@@ -1,0 +1,60 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px 40px;
+  gap: 100px;
+}
+.main h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+.main h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+.main p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .main h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .main h1 {
+    font-size: 2rem;
+  }
+  .main h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 550px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .main img {
+    display: none;
+  }
+}
